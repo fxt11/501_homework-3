@@ -1,95 +1,70 @@
-# Flutter Layout Demo
+# Android Compose Layout Demo
 
-A Flutter application demonstrating responsive layout design using Row and Column widgets with weighted children.
-
-## Features
-
-- **Row Layout**: Main screen divided into two sections with 25% and 75% width distribution
-- **Column Layout**: The larger section contains a Column with 3 weighted children
-- **Weighted Children**: Children with proportions of 2:3:5 (20%, 30%, 50% respectively)
-- **Visual Design**: Color-coded sections with text labels for easy visualization
-- **Responsive Design**: Uses Expanded widgets for flexible layout
+This Android project demonstrates a custom layout using Jetpack Compose with specific width and weight proportions.
 
 ## Layout Structure
 
-```
-Row (100% width)
-├── Left Section (25% width)
-│   └── Blue container with sidebar icon
-└── Right Section (75% width)
-    └── Column (100% height)
-        ├── Header (Green)
-        ├── Child 1 (Red) - Weight: 2 (20%)
-        ├── Child 2 (Orange) - Weight: 3 (30%)
-        └── Child 3 (Purple) - Weight: 5 (50%)
-```
+The main screen features a `Row` layout with two sections:
 
-## Screenshots
+### Left Section (25% width)
+- Takes up 25% of the screen width
+- Displays a green background with white text
+- Label: "25% Width Left Section"
 
-The app displays:
-- A blue left section taking 25% of the screen width
-- A gray right section taking 75% of the screen width
-- Three colored containers within the right section with different weights
-- Clear labels indicating the proportions and weights
+### Right Section (75% width)
+Contains a `Column` with three weighted children in 2:3:5 proportions:
 
-## Getting Started
+1. **Blue Section (Weight: 2)**
+   - Takes up 2/10 of the available height in the column
+   - Blue background with white text
+   - Label: "Weight: 2 Blue Section"
 
-### Prerequisites
+2. **Orange Section (Weight: 3)**
+   - Takes up 3/10 of the available height in the column
+   - Orange background with white text
+   - Label: "Weight: 3 Orange Section"
 
-- Flutter SDK (>=3.0.0)
-- Dart SDK
-- Android Studio or VS Code with Flutter extensions
+3. **Pink Section (Weight: 5)**
+   - Takes up 5/10 of the available height in the column
+   - Pink background with white text
+   - Label: "Weight: 5 Pink Section"
 
-### Installation
+## Technical Implementation
 
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd flutter_layout_demo
-   ```
-
-2. Install dependencies:
-   ```bash
-   flutter pub get
-   ```
-
-3. Run the app:
-   ```bash
-   flutter run
-   ```
+- **Framework**: Android Jetpack Compose
+- **Layout Components**: Row, Column, Box
+- **Weight Distribution**: Uses `weight()` modifier for proportional sizing
+- **Colors**: Custom colors for visual distinction
+- **Typography**: Bold white text for better visibility
 
 ## Project Structure
 
 ```
-lib/
-└── main.dart          # Main application file with layout implementation
-pubspec.yaml           # Flutter project configuration
-README.md             # This file
+app/src/main/java/com/example/a501homework3_1/
+├── MainActivity.kt          # Main activity with layout implementation
+└── ui/theme/
+    └── Theme.kt            # Material Design theme configuration
 ```
 
-## Key Widgets Used
+## How to Run
 
-- **Row**: Horizontal layout container
-- **Column**: Vertical layout container
-- **Expanded**: Flexible widget that takes available space
-- **Container**: Decorative container with styling
-- **Scaffold**: Basic app structure with AppBar
+1. Open the project in Android Studio
+2. Sync the project with Gradle files
+3. Run the app on an emulator or physical device
+4. The layout will display the proportional sections as described
 
-## Layout Concepts Demonstrated
+## Features Demonstrated
 
-1. **Flexible Layouts**: Using `Expanded` widgets for responsive design
-2. **Weight Distribution**: Using `flex` property for proportional sizing
-3. **Nested Layouts**: Combining Row and Column widgets
-4. **Visual Hierarchy**: Color coding and text labels for clarity
+- Row and Column layouts
+- Weight-based proportional sizing
+- Color-coded sections for visual clarity
+- Text labels for space usage visualization
+- Material Design 3 theming
+- Responsive layout design
 
-## Customization
+## Requirements
 
-You can easily modify:
-- Colors by changing the `Color.shade` values
-- Proportions by adjusting the `flex` values
-- Text content and icons
-- Border radius and padding
-
-## License
-
-This project is open source and available under the MIT License.
+- Android Studio Arctic Fox or later
+- Android SDK API 21 or higher
+- Kotlin support
+- Jetpack Compose dependencies
