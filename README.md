@@ -30,4 +30,3 @@ Contains a `Column` with three weighted children in 2:3:5 proportions:
    - Shows: "50%" (5/10 = 50%)
 
 
-- Jetpack Compose dependencies
